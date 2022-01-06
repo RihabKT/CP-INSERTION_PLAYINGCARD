@@ -1,0 +1,16 @@
+ALGORITHM INSERTION_PLAYINGCARD
+VAR  i, j : INTEGER;
+     Arrcard: ARRAY_OF INTEGER;
+
+BEGIN
+    FOR i FROM 0 TO Arrcard.length-1 STEP 1  DO
+    FOR j FROM 1 TO Arrcard.length STEP 1  DO
+        j :=i;
+      IF (Arrcard[j-1] > Arrcard[j]) THEN
+        swap Arrcard[j] AND Arrcard[j-1];
+      END_IF
+       j := j-1;
+    END_FOR
+     i := i+1;
+    END_FOR
+END
